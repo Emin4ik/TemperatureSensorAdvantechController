@@ -61,10 +61,10 @@ namespace WindowsFormsApp1
                             da1.Fill(dt1);
                             int row_count = dt1.Rows.Count;
                             int res = 0;
-                            int s_id = 82;
+                            int s_id = 82; // Sensor_id by default
                             Int32 bytes = 0;
-                            ushort s_addr = 3006;
-                            byte function_read = 4;
+                            ushort s_addr = 3006; // Temperature read Code (3007 - humidity)
+                            byte function_read = 4; // read funciton in modbus
                             byte slave_id = Convert.ToByte(s_id.ToString());
                             byte numOfRegs = 1;
                             byte[] sendData = new byte[24];
